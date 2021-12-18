@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{74A9A367-4E68-4D57-96EA-7B0783CE4776}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TSP_Dork_generator_hot_edition</RootNamespace>
+    <AssemblyName>TSP Dork generator hot edition</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>TSP Dork generator hot edition.ico</ApplicationIcon>
+    <StartupObject>TSP_Dork_generator_hot_edition.My.MyApplication</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="domainextentions.cs" />
+    <Compile Include="dorktypes.cs" />
+    <Compile Include="extracted_dorks.cs" />
+    <Compile Include="extracted_keywords.cs" />
+    <Compile Include="extracted_pagetypes.cs" />
+    <Compile Include="extractor_panel.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="generate_dorks_panel.cs" />
+    <Compile Include="info_panel.cs" />
+    <Compile Include="keywords.cs" />
+    <Compile Include="My\MyApplication.cs" />
+    <Compile Include="My\MyComputer.cs" />
+    <Compile Include="My\MyProject.cs" />
+    <Compile Include="My\MySettings.Designer.cs">
+      <DependentUpon>MySettings.settings</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="My\MySettingsProperty.cs" />
+    <Compile Include="My\Resources\Resources.cs" />
+    <Compile Include="pageformats.cs" />
+    <Compile Include="pagetypes.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="searchfunctions.cs" />
+    <Compile Include="settings_panel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="domainextentions.resources" />
+    <EmbeddedResource Include="dorktypes.resources" />
+    <EmbeddedResource Include="extracted_dorks.resources" />
+    <EmbeddedResource Include="extracted_keywords.resources" />
+    <EmbeddedResource Include="extracted_pagetypes.resources" />
+    <EmbeddedResource Include="extractor_panel.resources" />
+    <EmbeddedResource Include="Form1.resources" />
+    <EmbeddedResource Include="generate_dorks_panel.resources" />
+    <EmbeddedResource Include="info_panel.resources" />
+    <EmbeddedResource Include="keywords.resources" />
+    <EmbeddedResource Include="pageformats.resources" />
+    <EmbeddedResource Include="pagetypes.resources" />
+    <EmbeddedResource Include="Resources.resources" />
+    <EmbeddedResource Include="searchfunctions.resources" />
+    <EmbeddedResource Include="settings_panel.resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.manifest" />
+    <None Include="My\MySettings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>MySettings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

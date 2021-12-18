@@ -1,0 +1,111 @@
+using System;
+using System.ComponentModel;
+using System.Drawing;
+using System.Windows.Forms;
+
+namespace Find_Proxy_Pro_Version
+{
+	// Token: 0x02000002 RID: 2
+	public class Aboutpm : Form
+	{
+		// Token: 0x06000001 RID: 1 RVA: 0x00002050 File Offset: 0x00000250
+		public Aboutpm()
+		{
+			this.InitializeComponent();
+		}
+
+		// Token: 0x06000002 RID: 2 RVA: 0x000021FC File Offset: 0x000003FC
+		protected override void Dispose(bool disposing)
+		{
+			bool flag = disposing && this.components != null;
+			if (flag)
+			{
+				this.components.Dispose();
+			}
+			base.Dispose(disposing);
+		}
+
+		// Token: 0x06000003 RID: 3 RVA: 0x00002234 File Offset: 0x00000434
+		private void InitializeComponent()
+		{
+			this.label1 = new Label();
+			this.label2 = new Label();
+			this.label3 = new Label();
+			this.label4 = new Label();
+			this.label5 = new Label();
+			base.SuspendLayout();
+			this.label1.AutoSize = true;
+			this.label1.Font = new Font("Microsoft Sans Serif", 14.25f, FontStyle.Regular, GraphicsUnit.Point, 178);
+			this.label1.ForeColor = Color.White;
+			this.label1.Location = new Point(198, 75);
+			this.label1.Name = "label1";
+			this.label1.Size = new Size(295, 24);
+			this.label1.TabIndex = 0;
+			this.label1.Text = "Application find Proxy Version Pro";
+			this.label2.AutoSize = true;
+			this.label2.Font = new Font("Microsoft Sans Serif", 14.25f, FontStyle.Regular, GraphicsUnit.Point, 178);
+			this.label2.ForeColor = Color.White;
+			this.label2.Location = new Point(175, 126);
+			this.label2.Name = "label2";
+			this.label2.Size = new Size(338, 24);
+			this.label2.TabIndex = 1;
+			this.label2.Text = "Application Coded By Karvan-zed-team";
+			this.label3.AutoSize = true;
+			this.label3.Font = new Font("Microsoft Sans Serif", 14.25f, FontStyle.Regular, GraphicsUnit.Point, 178);
+			this.label3.ForeColor = Color.White;
+			this.label3.Location = new Point(214, 183);
+			this.label3.Name = "label3";
+			this.label3.Size = new Size(252, 24);
+			this.label3.TabIndex = 2;
+			this.label3.Text = "Channel 1 : @ZetaTech_iR";
+			this.label4.AutoSize = true;
+			this.label4.Font = new Font("Microsoft Sans Serif", 14.25f, FontStyle.Regular, GraphicsUnit.Point, 178);
+			this.label4.ForeColor = Color.White;
+			this.label4.Location = new Point(224, 230);
+			this.label4.Name = "label4";
+			this.label4.Size = new Size(233, 24);
+			this.label4.TabIndex = 3;
+			this.label4.Text = "Channel 2 : @LearnCracking";
+			this.label5.AutoSize = true;
+			this.label5.Font = new Font("Microsoft Sans Serif", 14.25f, FontStyle.Regular, GraphicsUnit.Point, 178);
+			this.label5.ForeColor = Color.Red;
+			this.label5.Location = new Point(205, 333);
+			this.label5.Name = "label5";
+			this.label5.Size = new Size(280, 24);
+			this.label5.TabIndex = 4;
+			this.label5.Text = "Please turn on your filter breaker";
+			base.AutoScaleDimensions = new SizeF(6f, 13f);
+			base.AutoScaleMode = AutoScaleMode.Font;
+			this.BackColor = Color.FromArgb(37, 49, 59);
+			base.ClientSize = new Size(695, 493);
+			base.Controls.Add(this.label5);
+			base.Controls.Add(this.label4);
+			base.Controls.Add(this.label3);
+			base.Controls.Add(this.label2);
+			base.Controls.Add(this.label1);
+			base.FormBorderStyle = FormBorderStyle.None;
+			base.Name = "Aboutpm";
+			this.Text = "Aboutpm";
+			base.ResumeLayout(false);
+			base.PerformLayout();
+		}
+
+		// Token: 0x04000001 RID: 1
+		private IContainer components = null;
+
+		// Token: 0x04000002 RID: 2
+		private Label label1;
+
+		// Token: 0x04000003 RID: 3
+		private Label label2;
+
+		// Token: 0x04000004 RID: 4
+		private Label label3;
+
+		// Token: 0x04000005 RID: 5
+		private Label label4;
+
+		// Token: 0x04000006 RID: 6
+		private Label label5;
+	}
+}

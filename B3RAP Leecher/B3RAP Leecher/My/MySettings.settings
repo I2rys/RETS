@@ -1,0 +1,15 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile CurrentProfile="(Default)" GeneratedClassNamespace="B3RAP_Leecher.My" GeneratedClassName="MySettings" xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="searchengines" Type="System.String" Scope="User">
+      <Value Profile="(Default)">bing</Value>
+    </Setting>
+    <Setting Name="leechoptions" Type="System.String" Scope="User">
+      <Value Profile="(Default)">emailpass</Value>
+    </Setting>
+    <Setting Name="customregex" Type="System.String" Scope="User">
+      <Value Profile="(Default)"></Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

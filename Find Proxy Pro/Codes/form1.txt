@@ -1,0 +1,631 @@
+using System;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Drawing;
+using System.Windows.Forms;
+using ns1;
+
+namespace Find_Proxy_Pro_Version
+{
+	// Token: 0x02000003 RID: 3
+	public class Form1 : Form
+	{
+		// Token: 0x06000004 RID: 4 RVA: 0x00002068 File Offset: 0x00000268
+		public Form1()
+		{
+			this.InitializeComponent();
+		}
+
+		// Token: 0x06000005 RID: 5 RVA: 0x00002674 File Offset: 0x00000874
+		private void bunifuImageButton1_Click(object sender, EventArgs e)
+		{
+			bool flag = this.panel1.Width == 55;
+			bool flag2 = flag;
+			bool flag3 = flag2;
+			if (flag3)
+			{
+				this.panel1.Width = 232;
+				this.bunifuImageButton1.Visible = false;
+				this.lblabout.Visible = true;
+			}
+			else
+			{
+				this.panel1.Width = 55;
+				this.bunifuImageButton1.Visible = true;
+				this.lblabout.Visible = false;
+			}
+		}
+
+		// Token: 0x06000006 RID: 6 RVA: 0x000026F4 File Offset: 0x000008F4
+		private void bunifuImageButton2_Click(object sender, EventArgs e)
+		{
+			bool flag = this.panel1.Width == 232;
+			bool flag2 = flag;
+			bool flag3 = flag2;
+			if (flag3)
+			{
+				this.panel1.Width = 55;
+				this.bunifuImageButton1.Visible = true;
+				this.lblabout.Visible = false;
+			}
+			else
+			{
+				this.panel1.Width = 232;
+				this.bunifuImageButton1.Visible = false;
+				this.lblabout.Visible = true;
+			}
+		}
+
+		// Token: 0x06000007 RID: 7 RVA: 0x00002080 File Offset: 0x00000280
+		private void bunifuThinButton21_Click(object sender, EventArgs e)
+		{
+			this.lblgood.Visible = true;
+			this.bunifuThinButton21.Visible = false;
+			this.bunifuThinButton22.Visible = false;
+			this.lblchannel.Visible = false;
+		}
+
+		// Token: 0x06000008 RID: 8 RVA: 0x00002778 File Offset: 0x00000978
+		private void bunifuThinButton22_Click(object sender, EventArgs e)
+		{
+			this.lblthank.Visible = true;
+			this.bunifuThinButton21.Visible = false;
+			this.bunifuThinButton22.Visible = false;
+			this.lblchannel.Visible = false;
+			Process.Start("https://t.me/ZetaTech_lR");
+		}
+
+		// Token: 0x06000009 RID: 9 RVA: 0x000020B7 File Offset: 0x000002B7
+		private void bunifuImageButton4_Click(object sender, EventArgs e)
+		{
+			base.WindowState = FormWindowState.Minimized;
+		}
+
+		// Token: 0x0600000A RID: 10 RVA: 0x000020C2 File Offset: 0x000002C2
+		private void bunifuImageButton3_Click(object sender, EventArgs e)
+		{
+			Application.Exit();
+		}
+
+		// Token: 0x0600000B RID: 11 RVA: 0x000027C8 File Offset: 0x000009C8
+		private void bunifuFlatButton1_Click(object sender, EventArgs e)
+		{
+			this.panel3.Controls.Clear();
+			proxylist1 proxylist = new proxylist1();
+			proxylist.TopLevel = false;
+			proxylist.FormBorderStyle = FormBorderStyle.None;
+			proxylist.WindowState = FormWindowState.Normal;
+			this.panel3.Controls.Add(proxylist);
+			proxylist.Show();
+		}
+
+		// Token: 0x0600000C RID: 12 RVA: 0x00002820 File Offset: 0x00000A20
+		private void bunifuFlatButton2_Click(object sender, EventArgs e)
+		{
+			this.panel3.Controls.Clear();
+			proxylist2 proxylist = new proxylist2();
+			proxylist.TopLevel = false;
+			proxylist.FormBorderStyle = FormBorderStyle.None;
+			proxylist.WindowState = FormWindowState.Normal;
+			this.panel3.Controls.Add(proxylist);
+			proxylist.Show();
+		}
+
+		// Token: 0x0600000D RID: 13 RVA: 0x00002878 File Offset: 0x00000A78
+		private void bunifuFlatButton3_Click(object sender, EventArgs e)
+		{
+			this.panel3.Controls.Clear();
+			proxylist3 proxylist = new proxylist3();
+			proxylist.TopLevel = false;
+			proxylist.FormBorderStyle = FormBorderStyle.None;
+			proxylist.WindowState = FormWindowState.Normal;
+			this.panel3.Controls.Add(proxylist);
+			proxylist.Show();
+		}
+
+		// Token: 0x0600000E RID: 14 RVA: 0x000028D0 File Offset: 0x00000AD0
+		private void bunifuFlatButton4_Click(object sender, EventArgs e)
+		{
+			this.panel3.Controls.Clear();
+			ProxyChecker proxyChecker = new ProxyChecker();
+			proxyChecker.TopLevel = false;
+			proxyChecker.FormBorderStyle = FormBorderStyle.None;
+			proxyChecker.WindowState = FormWindowState.Normal;
+			this.panel3.Controls.Add(proxyChecker);
+			proxyChecker.Show();
+		}
+
+		// Token: 0x0600000F RID: 15 RVA: 0x00002928 File Offset: 0x00000B28
+		private void bunifuFlatButton5_Click(object sender, EventArgs e)
+		{
+			this.panel3.Controls.Clear();
+			Aboutpm aboutpm = new Aboutpm();
+			aboutpm.TopLevel = false;
+			aboutpm.FormBorderStyle = FormBorderStyle.None;
+			aboutpm.WindowState = FormWindowState.Normal;
+			this.panel3.Controls.Add(aboutpm);
+			aboutpm.Show();
+		}
+
+		// Token: 0x06000010 RID: 16 RVA: 0x00002980 File Offset: 0x00000B80
+		protected override void Dispose(bool disposing)
+		{
+			bool flag = disposing && this.components != null;
+			if (flag)
+			{
+				this.components.Dispose();
+			}
+			base.Dispose(disposing);
+		}
+
+		// Token: 0x06000011 RID: 17 RVA: 0x000029B8 File Offset: 0x00000BB8
+		private void InitializeComponent()
+		{
+			this.components = new Container();
+			ComponentResourceManager componentResourceManager = new ComponentResourceManager(typeof(Form1));
+			this.panel1 = new Panel();
+			this.bunifuFlatButton5 = new BunifuFlatButton();
+			this.bunifuFlatButton4 = new BunifuFlatButton();
+			this.bunifuFlatButton3 = new BunifuFlatButton();
+			this.bunifuFlatButton2 = new BunifuFlatButton();
+			this.lblabout = new Label();
+			this.bunifuFlatButton1 = new BunifuFlatButton();
+			this.bunifuImageButton2 = new BunifuImageButton();
+			this.bunifuImageButton1 = new BunifuImageButton();
+			this.panel2 = new Panel();
+			this.label1 = new Label();
+			this.bunifuImageButton5 = new BunifuImageButton();
+			this.bunifuImageButton4 = new BunifuImageButton();
+			this.bunifuImageButton3 = new BunifuImageButton();
+			this.panel3 = new Panel();
+			this.lblgood = new Label();
+			this.lblthank = new Label();
+			this.bunifuThinButton22 = new BunifuThinButton2();
+			this.bunifuThinButton21 = new BunifuThinButton2();
+			this.lblchannel = new Label();
+			this.bunifuDragControl1 = new BunifuDragControl(this.components);
+			this.panel1.SuspendLayout();
+			((ISupportInitialize)this.bunifuImageButton2).BeginInit();
+			((ISupportInitialize)this.bunifuImageButton1).BeginInit();
+			this.panel2.SuspendLayout();
+			((ISupportInitialize)this.bunifuImageButton5).BeginInit();
+			((ISupportInitialize)this.bunifuImageButton4).BeginInit();
+			((ISupportInitialize)this.bunifuImageButton3).BeginInit();
+			this.panel3.SuspendLayout();
+			base.SuspendLayout();
+			this.panel1.BackColor = Color.FromArgb(25, 32, 40);
+			this.panel1.Controls.Add(this.bunifuFlatButton5);
+			this.panel1.Controls.Add(this.bunifuFlatButton4);
+			this.panel1.Controls.Add(this.bunifuFlatButton3);
+			this.panel1.Controls.Add(this.bunifuFlatButton2);
+			this.panel1.Controls.Add(this.lblabout);
+			this.panel1.Controls.Add(this.bunifuFlatButton1);
+			this.panel1.Controls.Add(this.bunifuImageButton2);
+			this.panel1.Controls.Add(this.bunifuImageButton1);
+			this.panel1.Dock = DockStyle.Left;
+			this.panel1.Location = new Point(0, 40);
+			this.panel1.Name = "panel1";
+			this.panel1.Size = new Size(55, 493);
+			this.panel1.TabIndex = 1;
+			this.bunifuFlatButton5.Activecolor = Color.Transparent;
+			this.bunifuFlatButton5.BackColor = Color.Transparent;
+			this.bunifuFlatButton5.BackgroundImageLayout = ImageLayout.Stretch;
+			this.bunifuFlatButton5.BorderRadius = 0;
+			this.bunifuFlatButton5.ButtonText = "        About Program";
+			this.bunifuFlatButton5.Cursor = Cursors.Hand;
+			this.bunifuFlatButton5.DisabledColor = Color.Gray;
+			this.bunifuFlatButton5.Iconcolor = Color.Transparent;
+			this.bunifuFlatButton5.Iconimage = (Image)componentResourceManager.GetObject("bunifuFlatButton5.Iconimage");
+			this.bunifuFlatButton5.Iconimage_right = null;
+			this.bunifuFlatButton5.Iconimage_right_Selected = null;
+			this.bunifuFlatButton5.Iconimage_Selected = null;
+			this.bunifuFlatButton5.IconMarginLeft = 0;
+			this.bunifuFlatButton5.IconMarginRight = 0;
+			this.bunifuFlatButton5.IconRightVisible = true;
+			this.bunifuFlatButton5.IconRightZoom = 0.0;
+			this.bunifuFlatButton5.IconVisible = true;
+			this.bunifuFlatButton5.IconZoom = 55.0;
+			this.bunifuFlatButton5.IsTab = false;
+			this.bunifuFlatButton5.Location = new Point(0, 401);
+			this.bunifuFlatButton5.Name = "bunifuFlatButton5";
+			this.bunifuFlatButton5.Normalcolor = Color.Transparent;
+			this.bunifuFlatButton5.OnHovercolor = Color.FromArgb(37, 49, 59);
+			this.bunifuFlatButton5.OnHoverTextColor = Color.White;
+			this.bunifuFlatButton5.selected = false;
+			this.bunifuFlatButton5.Size = new Size(232, 48);
+			this.bunifuFlatButton5.TabIndex = 6;
+			this.bunifuFlatButton5.Text = "        About Program";
+			this.bunifuFlatButton5.TextAlign = ContentAlignment.MiddleLeft;
+			this.bunifuFlatButton5.Textcolor = Color.White;
+			this.bunifuFlatButton5.TextFont = new Font("Microsoft Sans Serif", 9.75f, FontStyle.Regular, GraphicsUnit.Point, 0);
+			this.bunifuFlatButton5.Click += this.bunifuFlatButton5_Click;
+			this.bunifuFlatButton4.Activecolor = Color.Transparent;
+			this.bunifuFlatButton4.BackColor = Color.Transparent;
+			this.bunifuFlatButton4.BackgroundImageLayout = ImageLayout.Stretch;
+			this.bunifuFlatButton4.BorderRadius = 0;
+			this.bunifuFlatButton4.ButtonText = "        Proxy Checker";
+			this.bunifuFlatButton4.Cursor = Cursors.Hand;
+			this.bunifuFlatButton4.DisabledColor = Color.Gray;
+			this.bunifuFlatButton4.Iconcolor = Color.Transparent;
+			this.bunifuFlatButton4.Iconimage = (Image)componentResourceManager.GetObject("bunifuFlatButton4.Iconimage");
+			this.bunifuFlatButton4.Iconimage_right = null;
+			this.bunifuFlatButton4.Iconimage_right_Selected = null;
+			this.bunifuFlatButton4.Iconimage_Selected = null;
+			this.bunifuFlatButton4.IconMarginLeft = 0;
+			this.bunifuFlatButton4.IconMarginRight = 0;
+			this.bunifuFlatButton4.IconRightVisible = true;
+			this.bunifuFlatButton4.IconRightZoom = 0.0;
+			this.bunifuFlatButton4.IconVisible = true;
+			this.bunifuFlatButton4.IconZoom = 55.0;
+			this.bunifuFlatButton4.IsTab = false;
+			this.bunifuFlatButton4.Location = new Point(0, 266);
+			this.bunifuFlatButton4.Name = "bunifuFlatButton4";
+			this.bunifuFlatButton4.Normalcolor = Color.Transparent;
+			this.bunifuFlatButton4.OnHovercolor = Color.FromArgb(37, 49, 59);
+			this.bunifuFlatButton4.OnHoverTextColor = Color.White;
+			this.bunifuFlatButton4.selected = false;
+			this.bunifuFlatButton4.Size = new Size(232, 48);
+			this.bunifuFlatButton4.TabIndex = 5;
+			this.bunifuFlatButton4.Text = "        Proxy Checker";
+			this.bunifuFlatButton4.TextAlign = ContentAlignment.MiddleLeft;
+			this.bunifuFlatButton4.Textcolor = Color.White;
+			this.bunifuFlatButton4.TextFont = new Font("Microsoft Sans Serif", 9.75f, FontStyle.Regular, GraphicsUnit.Point, 0);
+			this.bunifuFlatButton4.Click += this.bunifuFlatButton4_Click;
+			this.bunifuFlatButton3.Activecolor = Color.Transparent;
+			this.bunifuFlatButton3.BackColor = Color.Transparent;
+			this.bunifuFlatButton3.BackgroundImageLayout = ImageLayout.Stretch;
+			this.bunifuFlatButton3.BorderRadius = 0;
+			this.bunifuFlatButton3.ButtonText = "        Proxy List 3";
+			this.bunifuFlatButton3.Cursor = Cursors.Hand;
+			this.bunifuFlatButton3.DisabledColor = Color.Gray;
+			this.bunifuFlatButton3.Iconcolor = Color.Transparent;
+			this.bunifuFlatButton3.Iconimage = (Image)componentResourceManager.GetObject("bunifuFlatButton3.Iconimage");
+			this.bunifuFlatButton3.Iconimage_right = null;
+			this.bunifuFlatButton3.Iconimage_right_Selected = null;
+			this.bunifuFlatButton3.Iconimage_Selected = null;
+			this.bunifuFlatButton3.IconMarginLeft = 0;
+			this.bunifuFlatButton3.IconMarginRight = 0;
+			this.bunifuFlatButton3.IconRightVisible = true;
+			this.bunifuFlatButton3.IconRightZoom = 0.0;
+			this.bunifuFlatButton3.IconVisible = true;
+			this.bunifuFlatButton3.IconZoom = 55.0;
+			this.bunifuFlatButton3.IsTab = false;
+			this.bunifuFlatButton3.Location = new Point(0, 210);
+			this.bunifuFlatButton3.Name = "bunifuFlatButton3";
+			this.bunifuFlatButton3.Normalcolor = Color.Transparent;
+			this.bunifuFlatButton3.OnHovercolor = Color.FromArgb(37, 49, 59);
+			this.bunifuFlatButton3.OnHoverTextColor = Color.White;
+			this.bunifuFlatButton3.selected = false;
+			this.bunifuFlatButton3.Size = new Size(232, 48);
+			this.bunifuFlatButton3.TabIndex = 4;
+			this.bunifuFlatButton3.Text = "        Proxy List 3";
+			this.bunifuFlatButton3.TextAlign = ContentAlignment.MiddleLeft;
+			this.bunifuFlatButton3.Textcolor = Color.White;
+			this.bunifuFlatButton3.TextFont = new Font("Microsoft Sans Serif", 9.75f, FontStyle.Regular, GraphicsUnit.Point, 0);
+			this.bunifuFlatButton3.Click += this.bunifuFlatButton3_Click;
+			this.bunifuFlatButton2.Activecolor = Color.Transparent;
+			this.bunifuFlatButton2.BackColor = Color.Transparent;
+			this.bunifuFlatButton2.BackgroundImageLayout = ImageLayout.Stretch;
+			this.bunifuFlatButton2.BorderRadius = 0;
+			this.bunifuFlatButton2.ButtonText = "        Proxy List 2";
+			this.bunifuFlatButton2.Cursor = Cursors.Hand;
+			this.bunifuFlatButton2.DisabledColor = Color.Gray;
+			this.bunifuFlatButton2.Iconcolor = Color.Transparent;
+			this.bunifuFlatButton2.Iconimage = (Image)componentResourceManager.GetObject("bunifuFlatButton2.Iconimage");
+			this.bunifuFlatButton2.Iconimage_right = null;
+			this.bunifuFlatButton2.Iconimage_right_Selected = null;
+			this.bunifuFlatButton2.Iconimage_Selected = null;
+			this.bunifuFlatButton2.IconMarginLeft = 0;
+			this.bunifuFlatButton2.IconMarginRight = 0;
+			this.bunifuFlatButton2.IconRightVisible = true;
+			this.bunifuFlatButton2.IconRightZoom = 0.0;
+			this.bunifuFlatButton2.IconVisible = true;
+			this.bunifuFlatButton2.IconZoom = 55.0;
+			this.bunifuFlatButton2.IsTab = false;
+			this.bunifuFlatButton2.Location = new Point(0, 154);
+			this.bunifuFlatButton2.Name = "bunifuFlatButton2";
+			this.bunifuFlatButton2.Normalcolor = Color.Transparent;
+			this.bunifuFlatButton2.OnHovercolor = Color.FromArgb(37, 49, 59);
+			this.bunifuFlatButton2.OnHoverTextColor = Color.White;
+			this.bunifuFlatButton2.selected = false;
+			this.bunifuFlatButton2.Size = new Size(232, 48);
+			this.bunifuFlatButton2.TabIndex = 3;
+			this.bunifuFlatButton2.Text = "        Proxy List 2";
+			this.bunifuFlatButton2.TextAlign = ContentAlignment.MiddleLeft;
+			this.bunifuFlatButton2.Textcolor = Color.White;
+			this.bunifuFlatButton2.TextFont = new Font("Microsoft Sans Serif", 9.75f, FontStyle.Regular, GraphicsUnit.Point, 0);
+			this.bunifuFlatButton2.Click += this.bunifuFlatButton2_Click;
+			this.lblabout.AutoSize = true;
+			this.lblabout.Font = new Font("Microsoft Sans Serif", 11.25f, FontStyle.Regular, GraphicsUnit.Point, 178);
+			this.lblabout.ForeColor = Color.White;
+			this.lblabout.Location = new Point(19, 22);
+			this.lblabout.Name = "lblabout";
+			this.lblabout.Size = new Size(160, 18);
+			this.lblabout.TabIndex = 2;
+			this.lblabout.Text = "Find Proxy Pro Version";
+			this.lblabout.Visible = false;
+			this.bunifuFlatButton1.Activecolor = Color.Transparent;
+			this.bunifuFlatButton1.BackColor = Color.Transparent;
+			this.bunifuFlatButton1.BackgroundImageLayout = ImageLayout.Stretch;
+			this.bunifuFlatButton1.BorderRadius = 0;
+			this.bunifuFlatButton1.ButtonText = "        Proxy List 1";
+			this.bunifuFlatButton1.Cursor = Cursors.Hand;
+			this.bunifuFlatButton1.DisabledColor = Color.Gray;
+			this.bunifuFlatButton1.Iconcolor = Color.Transparent;
+			this.bunifuFlatButton1.Iconimage = (Image)componentResourceManager.GetObject("bunifuFlatButton1.Iconimage");
+			this.bunifuFlatButton1.Iconimage_right = null;
+			this.bunifuFlatButton1.Iconimage_right_Selected = null;
+			this.bunifuFlatButton1.Iconimage_Selected = null;
+			this.bunifuFlatButton1.IconMarginLeft = 0;
+			this.bunifuFlatButton1.IconMarginRight = 0;
+			this.bunifuFlatButton1.IconRightVisible = true;
+			this.bunifuFlatButton1.IconRightZoom = 0.0;
+			this.bunifuFlatButton1.IconVisible = true;
+			this.bunifuFlatButton1.IconZoom = 55.0;
+			this.bunifuFlatButton1.IsTab = false;
+			this.bunifuFlatButton1.Location = new Point(0, 98);
+			this.bunifuFlatButton1.Name = "bunifuFlatButton1";
+			this.bunifuFlatButton1.Normalcolor = Color.Transparent;
+			this.bunifuFlatButton1.OnHovercolor = Color.FromArgb(37, 49, 59);
+			this.bunifuFlatButton1.OnHoverTextColor = Color.White;
+			this.bunifuFlatButton1.selected = false;
+			this.bunifuFlatButton1.Size = new Size(232, 48);
+			this.bunifuFlatButton1.TabIndex = 0;
+			this.bunifuFlatButton1.Text = "        Proxy List 1";
+			this.bunifuFlatButton1.TextAlign = ContentAlignment.MiddleLeft;
+			this.bunifuFlatButton1.Textcolor = Color.White;
+			this.bunifuFlatButton1.TextFont = new Font("Microsoft Sans Serif", 9.75f, FontStyle.Regular, GraphicsUnit.Point, 0);
+			this.bunifuFlatButton1.Click += this.bunifuFlatButton1_Click;
+			this.bunifuImageButton2.BackColor = Color.Transparent;
+			this.bunifuImageButton2.Cursor = Cursors.Hand;
+			this.bunifuImageButton2.Image = (Image)componentResourceManager.GetObject("bunifuImageButton2.Image");
+			this.bunifuImageButton2.ImageActive = (Image)componentResourceManager.GetObject("bunifuImageButton2.ImageActive");
+			this.bunifuImageButton2.Location = new Point(198, 8);
+			this.bunifuImageButton2.Name = "bunifuImageButton2";
+			this.bunifuImageButton2.Size = new Size(25, 25);
+			this.bunifuImageButton2.SizeMode = PictureBoxSizeMode.Zoom;
+			this.bunifuImageButton2.TabIndex = 1;
+			this.bunifuImageButton2.TabStop = false;
+			this.bunifuImageButton2.Zoom = 10;
+			this.bunifuImageButton2.Click += this.bunifuImageButton2_Click;
+			this.bunifuImageButton1.BackColor = Color.Transparent;
+			this.bunifuImageButton1.Cursor = Cursors.Hand;
+			this.bunifuImageButton1.Image = (Image)componentResourceManager.GetObject("bunifuImageButton1.Image");
+			this.bunifuImageButton1.ImageActive = null;
+			this.bunifuImageButton1.Location = new Point(12, 12);
+			this.bunifuImageButton1.Name = "bunifuImageButton1";
+			this.bunifuImageButton1.Size = new Size(28, 28);
+			this.bunifuImageButton1.SizeMode = PictureBoxSizeMode.Zoom;
+			this.bunifuImageButton1.TabIndex = 0;
+			this.bunifuImageButton1.TabStop = false;
+			this.bunifuImageButton1.Zoom = 10;
+			this.bunifuImageButton1.Click += this.bunifuImageButton1_Click;
+			this.panel2.BackColor = Color.FromArgb(25, 32, 40);
+			this.panel2.Controls.Add(this.label1);
+			this.panel2.Controls.Add(this.bunifuImageButton5);
+			this.panel2.Controls.Add(this.bunifuImageButton4);
+			this.panel2.Controls.Add(this.bunifuImageButton3);
+			this.panel2.Dock = DockStyle.Top;
+			this.panel2.Location = new Point(0, 0);
+			this.panel2.Name = "panel2";
+			this.panel2.Size = new Size(750, 40);
+			this.panel2.TabIndex = 2;
+			this.label1.AutoSize = true;
+			this.label1.Font = new Font("Microsoft Sans Serif", 12f, FontStyle.Regular, GraphicsUnit.Point, 178);
+			this.label1.ForeColor = Color.White;
+			this.label1.Location = new Point(54, 11);
+			this.label1.Name = "label1";
+			this.label1.Size = new Size(330, 20);
+			this.label1.TabIndex = 12;
+			this.label1.Text = "Aplication Find Proxy Pro Version | @ZetaTech_iR";
+			this.bunifuImageButton5.BackColor = Color.Transparent;
+			this.bunifuImageButton5.Cursor = Cursors.Hand;
+			this.bunifuImageButton5.Image = (Image)componentResourceManager.GetObject("bunifuImageButton5.Image");
+			this.bunifuImageButton5.ImageActive = null;
+			this.bunifuImageButton5.Location = new Point(12, 8);
+			this.bunifuImageButton5.Name = "bunifuImageButton5";
+			this.bunifuImageButton5.Size = new Size(25, 25);
+			this.bunifuImageButton5.SizeMode = PictureBoxSizeMode.Zoom;
+			this.bunifuImageButton5.TabIndex = 9;
+			this.bunifuImageButton5.TabStop = false;
+			this.bunifuImageButton5.Zoom = 10;
+			this.bunifuImageButton4.BackColor = Color.Transparent;
+			this.bunifuImageButton4.Cursor = Cursors.Hand;
+			this.bunifuImageButton4.Image = (Image)componentResourceManager.GetObject("bunifuImageButton4.Image");
+			this.bunifuImageButton4.ImageActive = null;
+			this.bunifuImageButton4.Location = new Point(682, 8);
+			this.bunifuImageButton4.Name = "bunifuImageButton4";
+			this.bunifuImageButton4.Size = new Size(25, 25);
+			this.bunifuImageButton4.SizeMode = PictureBoxSizeMode.Zoom;
+			this.bunifuImageButton4.TabIndex = 8;
+			this.bunifuImageButton4.TabStop = false;
+			this.bunifuImageButton4.Zoom = 10;
+			this.bunifuImageButton4.Click += this.bunifuImageButton4_Click;
+			this.bunifuImageButton3.BackColor = Color.Transparent;
+			this.bunifuImageButton3.Cursor = Cursors.Hand;
+			this.bunifuImageButton3.Image = (Image)componentResourceManager.GetObject("bunifuImageButton3.Image");
+			this.bunifuImageButton3.ImageActive = null;
+			this.bunifuImageButton3.Location = new Point(718, 8);
+			this.bunifuImageButton3.Name = "bunifuImageButton3";
+			this.bunifuImageButton3.Size = new Size(25, 25);
+			this.bunifuImageButton3.SizeMode = PictureBoxSizeMode.Zoom;
+			this.bunifuImageButton3.TabIndex = 7;
+			this.bunifuImageButton3.TabStop = false;
+			this.bunifuImageButton3.Zoom = 10;
+			this.bunifuImageButton3.Click += this.bunifuImageButton3_Click;
+			this.panel3.BackColor = Color.FromArgb(37, 49, 59);
+			this.panel3.Controls.Add(this.lblgood);
+			this.panel3.Controls.Add(this.lblthank);
+			this.panel3.Controls.Add(this.bunifuThinButton22);
+			this.panel3.Controls.Add(this.bunifuThinButton21);
+			this.panel3.Controls.Add(this.lblchannel);
+			this.panel3.Dock = DockStyle.Fill;
+			this.panel3.Location = new Point(55, 40);
+			this.panel3.Name = "panel3";
+			this.panel3.Size = new Size(695, 493);
+			this.panel3.TabIndex = 0;
+			this.lblgood.AutoSize = true;
+			this.lblgood.Font = new Font("Microsoft Sans Serif", 15.75f, FontStyle.Regular, GraphicsUnit.Point, 178);
+			this.lblgood.ForeColor = Color.White;
+			this.lblgood.Location = new Point(264, 203);
+			this.lblgood.Name = "lblgood";
+			this.lblgood.Size = new Size(161, 25);
+			this.lblgood.TabIndex = 11;
+			this.lblgood.Text = "Ok , Good Luck";
+			this.lblgood.Visible = false;
+			this.lblthank.AutoSize = true;
+			this.lblthank.Font = new Font("Microsoft Sans Serif", 15.75f, FontStyle.Regular, GraphicsUnit.Point, 178);
+			this.lblthank.ForeColor = Color.White;
+			this.lblthank.Location = new Point(275, 203);
+			this.lblthank.Name = "lblthank";
+			this.lblthank.Size = new Size(117, 25);
+			this.lblthank.TabIndex = 10;
+			this.lblthank.Text = "Thank You";
+			this.lblthank.Visible = false;
+			this.bunifuThinButton22.ActiveBorderThickness = 1;
+			this.bunifuThinButton22.ActiveCornerRadius = 20;
+			this.bunifuThinButton22.ActiveFillColor = Color.FromArgb(37, 49, 59);
+			this.bunifuThinButton22.ActiveForecolor = Color.White;
+			this.bunifuThinButton22.ActiveLineColor = Color.Teal;
+			this.bunifuThinButton22.BackColor = Color.FromArgb(37, 49, 59);
+			this.bunifuThinButton22.BackgroundImage = (Image)componentResourceManager.GetObject("bunifuThinButton22.BackgroundImage");
+			this.bunifuThinButton22.ButtonText = "Yes";
+			this.bunifuThinButton22.Cursor = Cursors.Hand;
+			this.bunifuThinButton22.Font = new Font("Microsoft Sans Serif", 12f, FontStyle.Regular, GraphicsUnit.Point, 0);
+			this.bunifuThinButton22.ForeColor = Color.FromArgb(25, 32, 40);
+			this.bunifuThinButton22.IdleBorderThickness = 1;
+			this.bunifuThinButton22.IdleCornerRadius = 20;
+			this.bunifuThinButton22.IdleFillColor = Color.FromArgb(25, 32, 40);
+			this.bunifuThinButton22.IdleForecolor = Color.White;
+			this.bunifuThinButton22.IdleLineColor = Color.Teal;
+			this.bunifuThinButton22.Location = new Point(358, 247);
+			this.bunifuThinButton22.Margin = new Padding(5);
+			this.bunifuThinButton22.Name = "bunifuThinButton22";
+			this.bunifuThinButton22.Size = new Size(170, 41);
+			this.bunifuThinButton22.TabIndex = 9;
+			this.bunifuThinButton22.TextAlign = ContentAlignment.MiddleCenter;
+			this.bunifuThinButton22.Click += this.bunifuThinButton22_Click;
+			this.bunifuThinButton21.ActiveBorderThickness = 1;
+			this.bunifuThinButton21.ActiveCornerRadius = 20;
+			this.bunifuThinButton21.ActiveFillColor = Color.FromArgb(37, 49, 59);
+			this.bunifuThinButton21.ActiveForecolor = Color.White;
+			this.bunifuThinButton21.ActiveLineColor = Color.Teal;
+			this.bunifuThinButton21.BackColor = Color.FromArgb(37, 49, 59);
+			this.bunifuThinButton21.BackgroundImage = (Image)componentResourceManager.GetObject("bunifuThinButton21.BackgroundImage");
+			this.bunifuThinButton21.ButtonText = "No";
+			this.bunifuThinButton21.Cursor = Cursors.Hand;
+			this.bunifuThinButton21.Font = new Font("Microsoft Sans Serif", 12f, FontStyle.Regular, GraphicsUnit.Point, 0);
+			this.bunifuThinButton21.ForeColor = Color.FromArgb(25, 32, 40);
+			this.bunifuThinButton21.IdleBorderThickness = 1;
+			this.bunifuThinButton21.IdleCornerRadius = 20;
+			this.bunifuThinButton21.IdleFillColor = Color.FromArgb(25, 32, 40);
+			this.bunifuThinButton21.IdleForecolor = Color.White;
+			this.bunifuThinButton21.IdleLineColor = Color.Teal;
+			this.bunifuThinButton21.Location = new Point(164, 247);
+			this.bunifuThinButton21.Margin = new Padding(5);
+			this.bunifuThinButton21.Name = "bunifuThinButton21";
+			this.bunifuThinButton21.Size = new Size(170, 41);
+			this.bunifuThinButton21.TabIndex = 8;
+			this.bunifuThinButton21.TextAlign = ContentAlignment.MiddleCenter;
+			this.bunifuThinButton21.Click += this.bunifuThinButton21_Click;
+			this.lblchannel.AutoSize = true;
+			this.lblchannel.Font = new Font("Microsoft Sans Serif", 15.75f, FontStyle.Regular, GraphicsUnit.Point, 178);
+			this.lblchannel.ForeColor = Color.LightGray;
+			this.lblchannel.Location = new Point(159, 174);
+			this.lblchannel.Name = "lblchannel";
+			this.lblchannel.Size = new Size(369, 25);
+			this.lblchannel.TabIndex = 7;
+			this.lblchannel.Text = "Do You Want To Enter The Channel?";
+			this.bunifuDragControl1.Fixed = true;
+			this.bunifuDragControl1.Horizontal = true;
+			this.bunifuDragControl1.TargetControl = this.panel3;
+			this.bunifuDragControl1.Vertical = true;
+			base.AutoScaleDimensions = new SizeF(6f, 13f);
+			base.AutoScaleMode = AutoScaleMode.Font;
+			base.ClientSize = new Size(750, 533);
+			base.Controls.Add(this.panel3);
+			base.Controls.Add(this.panel1);
+			base.Controls.Add(this.panel2);
+			base.FormBorderStyle = FormBorderStyle.None;
+			base.Name = "Form1";
+			this.panel1.ResumeLayout(false);
+			this.panel1.PerformLayout();
+			((ISupportInitialize)this.bunifuImageButton2).EndInit();
+			((ISupportInitialize)this.bunifuImageButton1).EndInit();
+			this.panel2.ResumeLayout(false);
+			this.panel2.PerformLayout();
+			((ISupportInitialize)this.bunifuImageButton5).EndInit();
+			((ISupportInitialize)this.bunifuImageButton4).EndInit();
+			((ISupportInitialize)this.bunifuImageButton3).EndInit();
+			this.panel3.ResumeLayout(false);
+			this.panel3.PerformLayout();
+			base.ResumeLayout(false);
+		}
+
+		// Token: 0x04000007 RID: 7
+		private IContainer components = null;
+
+		// Token: 0x04000008 RID: 8
+		private Panel panel1;
+
+		// Token: 0x04000009 RID: 9
+		private Panel panel2;
+
+		// Token: 0x0400000A RID: 10
+		private Panel panel3;
+
+		// Token: 0x0400000B RID: 11
+		private BunifuImageButton bunifuImageButton1;
+
+		// Token: 0x0400000C RID: 12
+		private BunifuImageButton bunifuImageButton2;
+
+		// Token: 0x0400000D RID: 13
+		private BunifuFlatButton bunifuFlatButton5;
+
+		// Token: 0x0400000E RID: 14
+		private BunifuFlatButton bunifuFlatButton4;
+
+		// Token: 0x0400000F RID: 15
+		private BunifuFlatButton bunifuFlatButton3;
+
+		// Token: 0x04000010 RID: 16
+		private BunifuFlatButton bunifuFlatButton2;
+
+		// Token: 0x04000011 RID: 17
+		private Label lblabout;
+
+		// Token: 0x04000012 RID: 18
+		private BunifuFlatButton bunifuFlatButton1;
+
+		// Token: 0x04000013 RID: 19
+		private BunifuThinButton2 bunifuThinButton22;
+
+		// Token: 0x04000014 RID: 20
+		private BunifuThinButton2 bunifuThinButton21;
+
+		// Token: 0x04000015 RID: 21
+		private Label lblchannel;
+
+		// Token: 0x04000016 RID: 22
+		private Label lblthank;
+
+		// Token: 0x04000017 RID: 23
+		private Label lblgood;
+
+		// Token: 0x04000018 RID: 24
+		private BunifuImageButton bunifuImageButton4;
+
+		// Token: 0x04000019 RID: 25
+		private BunifuImageButton bunifuImageButton3;
+
+		// Token: 0x0400001A RID: 26
+		private Label label1;
+
+		// Token: 0x0400001B RID: 27
+		private BunifuImageButton bunifuImageButton5;
+
+		// Token: 0x0400001C RID: 28
+		private BunifuDragControl bunifuDragControl1;
+	}
+}
